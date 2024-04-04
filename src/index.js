@@ -1,7 +1,12 @@
 const express=require("express")
+require('./config/db')
+require('dotenv').config()
+
 const cors=require('cors');
 
 const app=express();
+const PORT= process.env.PORT || 5454;
+
 
 app.use(express.json())
 app.use(cors())
@@ -44,4 +49,9 @@ app.use("/api/ratings",ratingRouter);
 const adminOrderRoutes=require("./routes/adminOrder.routes.js");
 app.use("/api/admin/orders",adminOrderRoutes);
 
-module.exports={app};
+
+app.listen(PORT, ()=>{
+    console.log("ecommerce api listing on port ",PORT)
+})
+
+// module.exports={app};
