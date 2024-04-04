@@ -1,7 +1,7 @@
 {
   "name": "ecommerce-nodejs",
   "version": "1.0.0",
-  "description": "",
+  "description": "Welcome to the documentation for the Ecommerce Project API! This API provides a set of endpoints and functionalities to interact with our eCommerce platform programmatically. With this API, you can build applications, integrations, and automate various tasks related to our online store.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,7 +20,7 @@
     "mongoose": "^7.3.2",
     "nodemailer": "^6.9.13",
     "nodemon": "^3.0.1",
-    "razorpay": "^2.9.1",
+    "razorpay": "^2.9.2",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0"
   }
