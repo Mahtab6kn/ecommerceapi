@@ -1,5 +1,5 @@
 const express=require("express")
-require('./config/db')
+require('./src/config/db.js')
 require('dotenv').config()
 
 const cors=require('cors');
@@ -15,38 +15,38 @@ app.get("/",(req,res)=>{
     return res.status(200).send({message:"welcome to ecommerce api - node"})
 })
 
-const authRouter=require("./routes/auth.routes.js")
+const authRouter=require("./src/routes/auth.routes.js")
 app.use("/auth",authRouter)
 
-const userRouter=require("./routes/user.routes.js");
+const userRouter=require("./src/routes/user.routes.js");
 app.use("/api/users",userRouter)
 
-const productRouter=require("./routes/product.routes.js");
+const productRouter=require("./src/routes/product.routes.js");
 app.use("/api/products",productRouter);
 
-const adminProductRouter=require("./routes/product.admin.routes.js");
+const adminProductRouter=require("./src/routes/product.admin.routes.js");
 app.use("/api/admin/products",adminProductRouter);
 
-const cartRouter=require("./routes/cart.routes.js")
+const cartRouter=require("./src/routes/cart.routes.js")
 app.use("/api/cart", cartRouter);
 
-const cartItemRouter=require("./routes/cartItem.routes.js")
+const cartItemRouter=require("./src/routes/cartItem.routes.js")
 app.use("/api/cart_items",cartItemRouter);
 
-const orderRouter=require("./routes/order.routes.js");
+const orderRouter=require("./src/routes/order.routes.js");
 app.use("/api/orders",orderRouter);
 
-const paymentRouter=require("./routes/payment.routes.js");
+const paymentRouter=require("./src/routes/payment.routes.js");
 app.use('/api/payments',paymentRouter)
 
-const reviewRouter=require("./routes/review.routes.js");
+const reviewRouter=require("./src/routes/review.routes.js");
 app.use("/api/reviews",reviewRouter);
 
-const ratingRouter=require("./routes/rating.routes.js");
+const ratingRouter=require("./src/routes/rating.routes.js");
 app.use("/api/ratings",ratingRouter);
 
 // admin routes handler
-const adminOrderRoutes=require("./routes/adminOrder.routes.js");
+const adminOrderRoutes=require("./src/routes/adminOrder.routes.js");
 app.use("/api/admin/orders",adminOrderRoutes);
 
 
