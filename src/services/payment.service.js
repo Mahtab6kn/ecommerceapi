@@ -22,7 +22,7 @@ const createPaymentLink= async (orderId)=>{
             email: true,
           },
           reminder_enable: true,
-          callback_url: `http://localhost:3000/payment/${orderId}`,
+          callback_url: `https://mahtab-ecommerceapp.netlify.app/payment/${orderId}`,
           callback_method: 'get',
         };
     
