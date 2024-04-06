@@ -68,7 +68,7 @@ const forgotPassword = async (req, res) => {
             from: process.env.Email,
             to: email,
             subject: 'Reset Password',
-            text: `http://localhost:3000/resetPassword/${token}`
+            text: `https://mahtab-ecommerceapp.netlify.app/resetPassword/${token}`
         };
 
         transporter.sendMail(mailOptions, function (error, info) {
