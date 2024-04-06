@@ -49,7 +49,7 @@ const getUserByEmail=async(email)=>{
         const user=await User.findOne({email});
 
         if(!user){
-            throw new Error("user found with email : ",email)
+            throw new Error("user not found with email : ",email)
         }
 
         return user;
